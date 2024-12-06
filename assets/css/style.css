@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Font';
+    src: url('/assets/Font.ttf');
+}
+
+:root {
+    --text-primary: black;
+    --navbar-color: #03142B;
+    --slider-height: 100vh;
+    --slider-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Font';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative; /* Allow absolute positioning of children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full height */
+    overflow: hidden;
+}
+
+.heroimg {
+    width: 100%; /* Ensure it stretches across the container */
+    height: 100%; /* Maintain full height */
+    object-fit: cover; /* Cover container nicely */
+    z-index: 1; /* Place image below content */
+}
+
+.herotitle {
+    position: absolute; /* Place over the hero section */
+    top: 20%; /* Adjust position as needed */
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: var(--text-primary); /* Use your variable for color */
+    font-size: 3rem;
+    z-index: 2; /* Ensure it appears above the image */
+    text-align: center;
+}
+
+.hero-slider {
+    width: var(--slider-width);
+    height: var(--slider-height);
+    overflow: hidden; /* Hide overflow */
+    position: relative;
+}
+
+.hero-slider-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth; /* Smooth scroll for snapping */
+    overflow-x: scroll; /* Horizontal scroll */
+    scroll-snap-type: x mandatory; /* Enable snap behavior */
+}
+
+.hero-slide {
+    scroll-snap-align: start; /* Each slide snaps to start */
+    flex: none;
+    width: 100%;
+    height: var(--slider-height);
+    position: relative;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Prevent interaction with the image */
+}
+
+
+.bestsellers {
+    margin-top: 50px;
+    padding: 25px;
+}
+
+.catagorytitle {
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.card {
+    text-decoration: none;
+    color: black;
+}
+
+.cardinformation {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardimg {
+    width: 250px;
+    border-radius: 25px;
+}
+
+.cardtitle, .cardprice {
+    font-size: 20px;
+}
+
+.cardprice {
+    margin-top: 10px;
+}
+
+@media screen {
+    
+}
