@@ -4,7 +4,7 @@
 }
 
 :root {
-    --text-primary: black;
+    --text-primary: #fff;
     --navbar-color: #03142B;
     --slider-height: 100vh;
     --slider-width: 100%;
@@ -39,9 +39,9 @@ body {
 
 .herotitle {
     position: absolute; /* Place over the hero section */
-    top: 20%; /* Adjust position as needed */
+    top: 5%; /* Adjust position as needed */
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -5%);
     color: var(--text-primary); /* Use your variable for color */
     font-size: 3rem;
     z-index: 2; /* Ensure it appears above the image */
@@ -112,8 +112,4 @@ body {
 
 .cardprice {
     margin-top: 10px;
-}
-
-@media screen {
-    
 }
